@@ -5,14 +5,12 @@
 ```python
 from raincloud import droplet
 
-# replace path to local filesystem with a droplet
-torch.save(model, droplet('foobar'))  
-
-# prints a unique url mynameisvinn/foobar-8fd86dee.pt
+# save a PyTorch model to a droplet
+torch.save(model, droplet('foobar'))  # prints a unique url rainpuddle/foobar-89ea455e.pt
 ```
-Anyone with the resulting url can access your model's weights.
+Now anyone with the resulting url can access your model's weights.
 ```python
-restored_model = torch.load(droplet('mynameisvinn/foobar-8fd86dee.pt'))
+restored_model = torch.load(droplet('rainpuddle/foobar-89ea455e.pt'))
 ```
 
 ## Why Droplet?

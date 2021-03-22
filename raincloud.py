@@ -6,7 +6,7 @@ class Droplet1(object):
     def __init__(self, tag):
         self.tag = tag
         self.uuid = uuid.uuid1()
-        self.bucket = "mynameisvinn"
+        self.bucket = "rainpuddle"
         self.location = f"{self.bucket}/{self.tag}{self.uuid}.pt"
 
     def __call__(self):
@@ -31,7 +31,7 @@ class Droplet1(object):
 def droplet(tag):
     tag = tag
     _uuid = str(uuid.uuid1()).split('-')[0]
-    bucket = "mynameisvinn"
+    bucket = "rainpuddle"
     location = f"{bucket}/{tag}-{_uuid}.pt"
 
     s3 = s3fs.S3FileSystem(anon=False)
