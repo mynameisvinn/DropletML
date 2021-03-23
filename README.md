@@ -1,5 +1,5 @@
 # DropletML
-**DropletML** lets you save and share PyTorch model weights with zero code overhead and no size limitations.
+**DropletML** lets you save and share PyTorch model weights on the cloud with minimal code overhead and no size limitations.
 
 ## Install
 ```bash
@@ -19,4 +19,11 @@ Afterwards, anyone with your tag can access your model.
 ```python
 path = droplet('rainpuddle/foobar-89ea455e.pt')
 restored_model = torch.load(path)
+```
+Of course, you can retrieve model weights without a droplet.
+```python
+import boto3
+
+client = boto3.client('s3')
+client.download_file('rainpuddle', 'foobar-89ea455e.pt','./foobar-89ea455e.pt')
 ```
