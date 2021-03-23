@@ -1,5 +1,5 @@
-# Droplet
-**Droplet** lets you save and share PyTorch model weights with zero code overhead. It is dropbox for ml models.
+# DropletML
+**DropletML** lets you save and share PyTorch model weights with zero code overhead and no size limitations.
 
 ## Install
 ```bash
@@ -11,11 +11,12 @@ You can save PyTorch models to a shared store in the same manner you would save 
 ```python
 from DropletML import droplet
 
-# save a PyTorch model to a droplet
 path = droplet('foobar')  # name your droplet
 torch.save(model, path)  # identical to saving a model to local file
+# prints rainpuddle/foobar-89ea455e.pt
 ```
-Now anyone with the resulting url can access your model's weights.
+Afterwards, anyone with your tag can access your model.
 ```python
-restored_model = torch.load(droplet('rainpuddle/foobar-89ea455e.pt'))
+path = droplet('rainpuddle/foobar-89ea455e.pt')
+restored_model = torch.load(path)
 ```
