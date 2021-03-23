@@ -2,10 +2,10 @@
 **DropletML** lets you save and share PyTorch model weights on the cloud with minimal code overhead. If you know `torch.save`, then you'll know Droplet.
 
 ## Why Droplet?
-* No size limitation. Droplet can tolerate up to 5TB models.
-* Minimal code overhead. You don't need to write additional code.
-* Single API to learn. There is a single function 'droplet'. That's it.
-* Easy to share. You can share your model with anyone.
+* **No size limitation**. Unlike Github, there are no size restrictions.
+* **Minimal code overhead**. You don't need to write additional code.
+* **Single API to learn**. There is a single function called 'droplet'. That's it.
+* **Easy to share**. You can share your models with anyone.
 
 ## Install
 ```bash
